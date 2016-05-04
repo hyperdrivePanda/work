@@ -1,0 +1,67 @@
+drop table room_info;
+drop table tenants;
+drop database star_hotel;
+create database star_hotel;
+use star_hotel;
+
+CREATE TABLE tenants(
+id INT NOT NULL,
+name VARCHAR(250),
+checkIn DATE,
+checkOut DATE,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE room_info(
+num INT NOT NULL AUTO_INCREMENT,
+vacancy  VARCHAR(30),
+size VARCHAR(300),
+floor INT, 
+tenant_id INT,
+tenant_name VARCHAR(250),
+PRIMARY KEY(num),
+FOREIGN KEY(tenant_id) REFERENCES tenants(id) 
+);
+
+Insert Into Tenants VALUES
+(100, 'Jeff Jewels', '2016-05-12', NULL),
+(101, 'Steve Lewis', '2016-05-17', NULL),
+(102, 'Markus Hitchens', '2016-05-27', NULL),
+(103, 'Ivan Goldberg', '2016-06-04', NULL),
+(104, 'Martha Stevinson', '2016-06-12', NULL),
+(105, 'John Doe', '2016-06-22', NULL),
+(106, 'Xion', '2016-06-22', NULL);
+
+INSERT INTO room_info VALUES
+(NULL, 'occupied', '1 bed 1 bath', 1, 100, 'Jeff Jewels'),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'occupied', '1 bed 1 bath', 1, 101, 'Steve Lewis'),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 1, null, null),
+
+(NULL, 'occupied', '1 bed 1 bath', 2, 102, 'Marcus Hitchens'),
+(NULL, 'vacant', '1 bed 1 bath', 2, null, null),
+(NULL, 'vacant', '1 bed 1 bath', 2, null, null),
+(NULL, 'occupied', '1 bed 1 bath', 2, 103, 'Ivan Goldberg'),
+(NULL, 'vacant', '1 bed 1 bath', 2, null, null),
+(NULL, 'vacant', '2 bed 1 bath', 2, null, null),
+(NULL, 'occupied', '2 bed 1 bath', 2, 104, 'Martha Stevinson'),
+(NULL, 'vacant', '2 bed 1 bath', 2, null, null),
+(NULL, 'vacant', '2 bed 1 bath', 2, null, null),
+(NULL, 'occupied', '2 bed 1 bath', 2, 105, 'John Doe'),
+
+(NULL, 'vacant', '2 bed 1 bath', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath 1 kitchen', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath 1 kitchen', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath 1 kitchen', 3, null, null),
+(NULL, 'vacant', '2 bed 1 bath 1 kitchen', 3, null, null),
+(NULL, 'occupied', '2 bed 1 bath 1 kitchen', 3, 106, 'Xion');
