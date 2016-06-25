@@ -1,0 +1,81 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <link href="donkey.css" rel="stylesheet" type="text/css" />
+<head runat="server">
+    <title>Donkey For Sale</title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 512px;
+            height: 460px;
+            float: left;
+        }
+        .auto-style2 {
+            font-size: large;
+        }
+        .auto-style3 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: xx-large;
+        }
+        .auto-style4 {
+            width: 1069px;
+            height: 290px;
+            text-align: center;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <img alt="donkey eyes" class="auto-style4" src="images/donkey_eyes.jpg" />
+    <p id="dateDisplay"></p>
+    <p id="timeDisplay"></p>
+    <h2 class="auto-style3">
+        Donkey For Sale</h2>
+    <form id="form1" runat="server">
+    <div>
+    
+        <img alt="donkey" aria-autocomplete="none" class="auto-style1" src="images/Donkey-1.jpg" style="margin:50px 50px 50px 50px"/><span class="auto-style2"><br />
+        <br />
+&nbsp;Have you ever sat back for a moment deep in thought thinking to yourself &quot;Oh my goodness I&#39;d 
+        really like to have a donkey right now&quot; well now you can. For just a few hundred gold pieces you could have yourself your 
+        very own donkey to carry your cargo and ride you around your village. We will make sure this donkey gets shipped directly to you, 
+        wherever you are within 72 hourse no questions asked. All your neighbors will be so impressed with your new purchase; 
+        you will also have a long time companion to pet and share carrots with. Do not hesitate, buy this donkey right now 
+        supplies are limited.<br />
+        <br />
+        <font color ="maroon">$200.00/donkey</font>
+
+                                                                                                                                     </span>
+        <hr style="width: 700px; text-align: right" />
+        </div>
+
+        Number of Donkeys: <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="Submit1" type="submit" value="submit" /></form>
+    <p id="demo"></p>
+    <script  type="text/javascript" language="javascript">
+        document.getElementById("dateDisplay").innerHTML = Date();
+        var stringBreed
+        var intScale
+
+        stringBreed = window.prompt("What is your favourite breed of donkey?", "standard")
+        intScale = window.prompt("How much do you like this Breed on a scale of 1 to 100?", "74")
+
+        do
+        {
+        
+        document.write(stringBreed.fontcolor("red") + "   ");
+        //document.write(intScale + " ");
+        intScale -= 1;
+        }
+        while(intScale > 0)
+        </script>
+</body>
+</html>
